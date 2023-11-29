@@ -1,0 +1,12 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+    <div class="info_box">
+        <h4>{{ task.title }}</h4>
+        <p>{{ task.description }}</p>
+        <p>{{ task.priority }}</p>
+        <p>{{ task.create_at }}</p>
+        <p>{{ task.deadline }}</p>
+        <p>{{ task.status }}</p>
+    </div>
+{% endblock %}
