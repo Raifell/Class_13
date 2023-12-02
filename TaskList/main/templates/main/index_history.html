@@ -6,11 +6,10 @@
             <img src="{{ task.image.url }}">
             <div class="info">
                 <h4>{{ task.title }}</h4>
-                <h5>{{ task.deadline }}</h5>
+                <h5><span style="color: brown">Completed at: </span>{{ task.completed_at }}</h5>
                 <div class="task_navi">
                     <a href="{% url 'task_delete' task.slug%}">Delete</a> |
-                    <a href="{% url 'task_complete' task.slug%}">Complete</a> |
-                    <a href="{% url 'task_update' task.slug%}">Update</a> |
+                    <a href="{% url 'task_return' task.slug %}">In Progress</a> |
                     <a href="{% url 'task_info' task.slug %}">More info...</a>
                 </div>
             </div>
