@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
     <title>{{ title }}</title>
 </head>
-<body>
+<body {% if theme == 1 %} style="background: #1c1c1c;" {% endif %}>
     <section class="top">
         <ul>
             <li><a href="{% url 'task_list' %}">Tasks</a></li>
             <li><a href="{% url 'add_task' %}">Create</a></li>
             <li><a href="{% url 'task_history' %}">History</a></li>
-            <li><a href="">Settings</a></li>
+            <li><a href="{% url 'settings_page' %}">Settings</a></li>
         </ul>
     </section>
     <section class="content">

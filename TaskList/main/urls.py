@@ -10,4 +10,6 @@ urlpatterns = [
     path('complete/<slug:task_slug>/', views.task_complete, name='task_complete'),
     path('update/<slug:task_slug>/', views.task_update, name='task_update'),
     path('return/<slug:task_slug>/', views.task_return, name='task_return'),
+    path('actions/', views.actions_table, name='actions_table'),
+    path('settings/', views.settings_page, name='settings_page'),
 ]

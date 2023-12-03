@@ -22,3 +22,18 @@ class Task(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ActionType(models.Model):
+    name = models.CharField('Action', max_length=255)
+
+    def __str__(self):
+        return self.name
+
+
+class Action(models.Model):
+    action = models.ForeignKey('ActionType', on_delete=models.DO_NOTHING, verbose_name='Action')
+    date = models.DateTimeField('Date')
+
+    def __str__(self):
+        return self.action.name

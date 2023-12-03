@@ -15,6 +15,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid lightgray;
+    border-top: none;
 }
 .top ul{
     margin: auto;
@@ -38,6 +40,14 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 20px;
+}
+.content table{
+    width: 20vw;
+    background: bisque;
+}
+.content table,
+tr > * {
+  border: 1px solid;
 }
 .content .info_box{
     margin-top: 100px;

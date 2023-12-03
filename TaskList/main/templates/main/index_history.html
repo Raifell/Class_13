@@ -1,6 +1,7 @@
 {% extends 'main/layout.html' %}
 
 {% block content %}
+    <a href="{% url 'actions_table' %}" style="font-size: 18px">History view</a>
     {% for task in tasks %}
         <div class="box">
             <img src="{{ task.image.url }}">
